@@ -24,7 +24,9 @@ body {
   max-width: 1250px;
 }
 
+
 .paper {
+  position: relative; /* important */
   background: #fff;
   width: 100%;
   min-height: 1189px; /* A4 height */
@@ -37,17 +39,25 @@ body {
   font-weight: 500; /* all text slightly bold */
   color: #111;
 }
+.paper > .line.date-line {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  margin: 0;
+  white-space: nowrap;
+}
 
 /* ================= HEADINGS ================= */
 h1 {
   text-align: center;
   font-size: 22px;
-  font-weight: 600; /* medium-bold */
+  font-weight: 100; /* medium-bold */
   margin-bottom: 10px;
 }
 
 h2, h3 {
-  font-weight: 600; /* medium-bold */
+  text-align: center;
+  font-weight: 100; /* medium-bold */
   margin-bottom: 6px;
 }
 
