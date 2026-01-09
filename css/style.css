@@ -63,11 +63,8 @@ h2, h3 {
 
 /* ================= PARAGRAPHS ================= */
 p {
+  font-weight: 100;
   margin-bottom: 8px;
-  font-size: 14px;
-  line-height: 1.4;
-  font-weight: 500; /* slightly bold for better readability */
-  color: #111;
 }
 
 /* ================= INPUTS ================= */

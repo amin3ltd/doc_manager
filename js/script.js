@@ -115,23 +115,93 @@ function preparePrintable() {
   if (!win) return alert("Popup blocked");
 
   win.document.write(`<!doctype html>
-<html>
+<html lang="am">
 <head>
 <meta charset="utf-8">
+
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic&display=swap" rel="stylesheet">
+
 <style>
-@page { size: A4; margin: 12mm; }
-body { font-family: 'Noto Sans Ethiopic', sans-serif; font-size:12px; line-height:1.2; padding:0; margin:0; }
-.paper { border:1px solid #aaa; padding:10mm; }
-p { margin:2px 0; line-height:1.2; font-size:12px; }
-table { width:100%; border-collapse:collapse; font-size:11px; }
-td { border:1px solid #bbb; padding:3px 4px; }
-img { height:30px; }
-input, select { font-size:11px; border:none; border-bottom:1px solid #000; }
+/* ===== MATCH MAIN STYLE ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans Ethiopic", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #111;
+}
+
+.paper {
+  position: relative;
+  width: 210mm;
+  min-height: 297mm;
+  padding: 20mm 15mm;
+  border: 1px solid #000;
+}
+
+/* DATE (TOP RIGHT) — PRESERVED */
+.paper > .line.date-line {
+  position: absolute;
+  top: 15mm;
+  right: 15mm;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+/* TEXT */
+p {
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+h2, h3 {
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+td {
+  border: 1px solid #000;
+  padding: 6px;
+  vertical-align: top;
+}
+
+/* SIGNATURE IMAGES */
+img {
+  height: 30px;
+}
+
+/* PRINT PAGE */
+@page {
+  size: A4;
+  margin: 0;
+}
 </style>
 </head>
+
 <body>
-<div class="paper">${clone.innerHTML}</div>
+  <div class="paper">
+    ${clone.innerHTML}
+  </div>
 </body>
 </html>`);
 
