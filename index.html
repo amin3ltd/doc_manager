@@ -9,285 +9,342 @@
 </head>
 <body>
   <div class="container">
-  
-    <div class="paper" id="formPaper" role="document" aria-label="Contract form">
-      <br>
-       <p class="line date-line">
-        ቀን:- <input type="text" id="contract_date" placeholder="ቀን/ወር/አ/ም" >
-      </p>
-      <br>
-      <h1>የንግድ ስራ በጋራ አብሮ የመስራት ስምምነት</h1>
-      <br>
-      
-
-      <div class="center small-note"></div>
-
-      <div class="section">
-        
-
-        <h3 class="line"><u>አንቀጽ 1፡ መግቢያ</u></h3>
-        <br>
-
-        <p class="line">ይህ የንግድ ስራ በጋራ አብሮ የመስራት ስምምነት (ከዚህ በኋላ “ስምምነት”) በ ረቂቅ ትሬዲንግ ኃ/የተ/የግል ማህበር /Rekik Trading PLC/ (ከዚህ በኋላ “ድርጅቱ”)፤ አድራሻ፡- አ/አ፤ ን/ስ/ላ/ክ/ከ፤ ወ፡ 02: የቤ/ቁ. <input type="text" id="company_house_no" class="small" placeholder="የቤት ቁጥር"> የግብር ከፋይ መለያ ቁጥር፡ <input type="text" id="company_tax_id" class="small" value="0087084805">: ስ.ቁ.<input type="text" id="company_phone" class="small" value=""> እና
-
-     
-          <span style="white-space:nowrap;"></span>
-          <select id="partner_title" aria-label="partner title">
-            <option value="አቶ">አቶ</option>
-            <option value="ወ/ሮ">ወ/ሮ</option>
-          </select>
-          :
-          <input type="text" id="partner_name" placeholder="ሙሉ ስም" class="wide" />
-          <span style="margin-left:6px;">ዜግነት:</span>
-          <input type="text" id="partner_nationality" value="ኢትዮጵያዊ" class="small" />
-     
-
-     
-          አድራሻ፡
-          <input type="text" id="partner_address_region" placeholder=" ክልል / ዞን / ወረዳ" class="wide" />
    
-
-       
-          ስ.ቁጥር፡ <input type="text" id="partner_phone" placeholder="ስልክ ቁጥር" class="small" value="">
-     
-
-       
-          መካከል ከዚህ በታች በተመለከተው አግባብ ድርጅቱ እና የንግድ አጋሩ (ከዚህ በኋላ “የንግድ አጋሮች”) በጋራ አብረን የንግድ ስራ ለመስራት በ ቀን: <input type="text" id="party_activity_date" class="small" placeholder="ቀን"> ዓ/ም:<input type="text" id="party_activity_year" class="small" placeholder="ዓ/ም"> በ:<input type="text" id="party_activity_place" class="small" placeholder="ቦታ"> ያደረግነው የንግድ ስራ ስምምነት ሲሆን በስምምነቱ በወንድ ጾታ የተገለጸው ለሴት ጾታም ተፈጻሚነት ይኖረዋል።
-        </p>
-
+  <!-- ID Upload Section -->
+  <div class="id-upload-section no-print">
+    <h3>የመታወቂያ ፎቶዎች</h3>
+    <div class="id-upload-row">
+      <div class="id-upload-item">
+        <label for="front_id">የፊት መታወቂያ:</label>
+        <input type="file" id="front_id" accept="image/*" capture="environment">
+        <div class="id-preview" id="front_id_preview"></div>
       </div>
-      <br>
-
-      <div class="section">
-        <h3 class="line"><u>አንቀጽ 2: የስምምነቱ ዓላማ</u></h3>
-        <br>
-        <p class="line">የዚህ ስምምነት ዓላማ ድርጅቱ እያከናወናቸው ለሚገኙት የንግድ ስራዎች የገንዘብ (የፋይናንስ) አቅርቦት በማስፈለጉ እና የንግድ ስራ አጋሩም ይህንን ገንዘብ/ፋይናንስ በማቅረብ ገንዘቡ በድርጅቱ አማካኝነት ለንግድ ስራው ዓላማ ውሎ ከሚገኘው ትርፍ ላይ ተካፋይ ለመሆን በመፈለጉ በዚህ አግባብ ድርጅቱ እና የንግድ ስራ አጋሩ በጋራ አብረው እንዲሰሩ ለማስቻል ነው።</p>
+      <div class="id-upload-item">
+        <label for="back_id">የኋላ መታወቂያ:</label>
+        <input type="file" id="back_id" accept="image/*" capture="environment">
+        <div class="id-preview" id="back_id_preview"></div>
       </div>
-      <br>
-      <div class="section">
-        <h3 class="line"><u>አንቀጽ 3፡ የንግድ ስራ አጋሩ መብት እና ግደታ</u></h3>
-        <br>
-
-        <p class="line">3.1&nbsp;&nbsp; የንግድ ስራ አጋሩ ድርጅቱ ለሚያከናውነው የንግድ ስራ ማስኬጃነት የሚውል ብር  ሃምሳ ሺህ ብር ( <input type="number" id="contrib_amount" value="" min="0" step="1" class="small"> ) ብር  ይህ ስምምነት በተፈረመበት ዕለት ለድርጅቱ የመስጠት ግደታ አለበት።</p>
-
-        <p class="line">3.2&nbsp;&nbsp; የንግድ ስራ አጋሩ ለድርጅቱ ለሰጠው ገንዘብ ዋስትና የሚሆን በድርጅቱ ስም የተሰጠ የባንክ ቼክ የመቀበል መብት አለው።</p>
-
-        <p class="line">3.3&nbsp;&nbsp; ድርጅቱ በንግድ አጋሩ የተሰጠውን ገንዘብ በወቅቱ ለመክፈል ካልቻለ የንግድ አጋሩ ለድርጅቱ የአንድ ወር የማስጠንቀቂያ ጊዜ ከሰጠ በኋላ በዋስትና የተቀበለውን ከታች በአንቀጽ 6 የተመለከተውን ቼክ በመመንዘር ገንዘቡን የመውሰድ መብት አለው።</p>
-      </div>
-      <br>
-
-      <div class="section">
-        <h3 class="line"><u>አንቀጽ 4፡ የድርጅቱ መብት እና ግደታ</u></h3>
-        <br>
-        <p class="line">4.1&nbsp;&nbsp; ድርጅቱ ከላይ በአንቀጽ 3/3.1 የተመለከተውን ገንዘብ ለንግድ ስራው ማስኬጃነት ከንግድ አጋሩ የመቀበል መብት አለው።</p>
-
-        <p class="line">4.2&nbsp;&nbsp; ድርጅቱ የንግድ አጋሩ በሰጠው ገንዘብ የሚከናወነውን የንግድ ስራ በፈለገው መንገድ የመምራት ሙሉ ነጻነት አለው።</p>
-
-        <p class="line">4.3&nbsp;&nbsp; ድርጅቱ ከንግድ አጋሩ የተቀበለውን የንግድ ስራ ማስኬጃ ገንዘብ ትርፋማ ነው ለሚለው የትኛውም ሕጋዊ የንግድ ስራ ዓላማ የማዋል እና የማስተዳደር መብት አለው።</p>
-
-        <p class="line">4.4&nbsp;&nbsp; ድርጅቱ ከንግድ አጋሩ ለተቀበለው ገንዘብ መመለስ ዋስትና ይሆን ዘንድ ከታች በአንቀጽ 6 በተመለከተው አግባብ በድርጅቱ ስም የወጣ ቼክ በማስያዣነት የመስጠት ግደታ አለበት።</p>
-      </div>
-
-      <br>
-        <div class="section">
-        <h3 class="line"><u>አንቀጽ 5፡ ክልከላ</u></h3>
-        <br>
-        <p class="line">5.1&nbsp;&nbsp; የንግድ ስራ አጋሩ ለድርጅቱ የንግድ ስራ ማስኬጃ የሰጠውን ከላይ በንዑስ አንቀጽ 3.1 የተመለከተው ገንዘብ ይህ ውል ጸንቶ የሚቆይበት ጊዜ እስካላበቃ ድረስ እንዲመለስለት ሊጠይቅ አይችልም።</p>
-
-        <p class="line">5.2&nbsp;&nbsp; የንግድ አጋሩ በድርጅቱ ለዋስትና የተሰጠውን ከታች በአንቀጽ 6 የተመለከተውን ቼክ ለእዳ መክፈያነትም ሆነ ማስያዣነት ወይም ለሌላ ማናቸውም ዓላማ ለሶስተኛ ወገን አሳልፎ መስጠት አይችልም።</p>
-
-      </div>
-      <br>
-
-      <div class="section">
-        <h3 class="line"><u>አንቀጽ 6፡ ስለዋስትና</u></h3>
-        <br>
-        <p class="line">ድርጅቱ ይህ ስምምነት ጸንቶ የሚቆይበት ጊዜ ሲያበቃ በንግድ አጋሩ የተሰጠውን ከላይ በአንቀጽ 3/3.1 ስር የተመለከተውን ዋና ገንዘብ ለመመለሱ ዋስትና ይሆን ዘንድ በድርጅቱ ስም የወጣ ቁጥሩ <input type="text" id="cheque_no" class="small" value="D7868116">  የሆነ በቀን <input type="text" id="cheque_date" class="small" placeholder="ቀን/ወር/ዓ/ም">  ኢትዮጵያ ንግድ ባንክ ለ <input type="text" id="bank_branch" class="small" value="" placeholder="ቅርጫፍ">  የሚመነዘር ብር: <input type="number" id="cheque_amount" value="" class="small" min="0"> ቼክ ለንግድ አጋሩ ለመስጠት ተስማምቷል።</p>
-      </div>
-      <br>
-
-      <div class="section">
-        <h3 class="line"><u>አንቀጽ 7፡ የማስታወቂያ እና የማስጠንቀቂያ አሰጣጥ</u></h3>
-        <br>
-        <p class="line">7.1&nbsp;&nbsp;በዚህ ስምምነት መሰረት በተዋዋዮች የሚሰጥ ማስታወቂያ እና ማስጠንቀቂያ በፅሑፍ መደረግ ያለበት ሲሆን በአማርኛ ቋንቋ ወይም በሌላ ቋንቋ የተዘጋጀ ሊሆን ይችላል፡፡ ነገር ግን እንደአስፈላጊነቱ በአማርኛ ቋንቋ ወይም በሌላ ቋንቋ የተዘጋጀው ማስታወቂያ ወይም ማስጠንቀቂያ ተዋዋይ ወገኖች ሊያነቡት እና ለረዱት በሚችሉት ሌላ ቋንቋ ወይም በአማርኛ ቋንቋ ተተርጉሞ መቅረብ ይኖርበታል፡፡</p>
-        <p class="line">7.2&nbsp;&nbsp;አንደኛው ተዋዋይ ለሌላኛው ተዋዋይ የሚሰጠው ማስታወቂያ ወይም ማስጠንቀቂያ በአግባቡ እንደደርሰ የሚቆጠረው ማስታወቂያው ወይም ማስጠንቀቂያው ከዚህ ቀጥሎ በተመለከተው የተዋዋዮች አድራሻ በእጅ ወይም በኢ-ሜይል ወይም ተዋዋዮች አንደኛው ለሌላኛው በፅሑፍ በሚገልፀው የማስታወቂያ ወይም የማስጠንቀቂያ መስጫ አድራሻ የደረሰ ከሆነ ነው፡፡</p>
-
-        <p class="line">ማስታወቂያ/ማስጠንቀቂያ ለንግድ አጋሩ የሚላክበት   አድራሻ፡ <input type="text" id="partner_notice_addr" class="wide" placeholder="የአጋር ማስታወቂያ አድራሻ">  ስ.ቁጥር፡ <input type="text" id="partner_notice_phone" class="small" placeholder="ስልክ"></p>
-      </div>
-      <br>
-
-      <div class="section">
-        <h3 class="line"><u>አንቀጽ 8፡ ስምምነቱ ጸንቶ የሚቆይበት ጊዜ</u></h3>
-        <br>
-        <p class="line">8.1&nbsp;&nbsp; ይህ ስምምነት ከተፈረመበት ጊዜ ጀምሮ ለ <input type="number" id="contract_months" min="0" value="6" class="small"> ወር ጊዜ ማለትም እስከ: <input type="text" id="contract_end_date" class="small" placeholder="ቀን/ወር/ዓ/ም"> ይቆያል፡፡</p>
-        <p class="line">8.2&nbsp;&nbsp;ከላይ በንዑስ አንቀጽ 8.1 የተመለከተው ቢኖርም ከታች በአንቀጽ 10/10.1 በተመለከተው አግባብ በሁለቱ ወገኖች ስምምነት ውሉ ጸንቶ ከሚቆይበት ጊዜ አስቀድሞ ሊቋረጥ ይችላል፡፡</p>
-      </div>
-      <br>
-
-      <div class="section">
-        <h3 class="line"><u>አንቀጽ 9፡ ስምምነቱን ስለማቋረጥ</u></h3>
-        <br>
-        <p class="line">ይህ ስምምነት በሚከተሉት ሁኔታዎች ሊቋረጥ ይችላል፡፡</p>
-        <p class="line">9.1&nbsp;&nbsp; ድርጅቱ እና የንግድ አጋሩ ስምምነቱን ለማቋረጥ በሚያደርጉት የሁለትዮሽ ስምምነት መሰረት፤</p>
-        <p class="line">9.2&nbsp;&nbsp; ውሉን የተዋዋሉበት የጊዜ ገደብ ሲያበቃ፤ማለትም  <input type="text" id="contract_end_date" class="small" placeholder="ቀን/ወር/ዓ/ም"> ዓ/ም በሓላ፤</p>
-        <p class="line">9.3&nbsp;&nbsp;ይህንን የገንዘብ ብድር ስምምነት ውል ለማፍረስ የሞከረ ወገን በፍ/ብ/ሕ/ቁ.1889/1890 መሰረት ውሉ ለፈረሰበት ወገን 100000(አንድ መቶ ሺህ ብር) ገደብ ከፍሎ ውሉ በህግ ፊት የፀና ይሆናል፡፡ ውሉም አይፈርስም፡፡</p>
-      </div>
-      <br>
-
-      <div class="section">
-        <h3 class="line"><u>እማኞች</u></h3>
-        <br>
-        <p class="line">
-          1. 
-          <select id="side_title" aria-label="side title">
-            <option value="አቶ">አቶ</option>
-            <option value="ወ/ሮ">ወ/ሮ</option>
-          </select>
-          <input type="text" id="side_name" class="wide" placeholder="ሙሉ ስም" value="">ዜግነት: <input type="text" id="side_nationality" value="ኢትዮጵያዊ" class="small">
-          አድራሻ: <input type="text" id="side_addr" class="wide" value="">ክ/ከተማ፡ <input type="text" id="side_addr" class="wide" value="">ወረዳ፡ <input type="text" id="side_addr" class="wide" value="">
-          የቤት ቁጥር፡ <input type="text" id="side_addr" class="wide" value="">
-        </p>
-
-        <p class="line">
-          2. 
-          <select id="side_title" aria-label="side title">
-            <option value="አቶ">አቶ</option>
-            <option value="ወ/ሮ">ወ/ሮ</option>
-          </select>
-          <input type="text" id="side_name" class="wide" placeholder="ሙሉ ስም" value="">ዜግነት: <input type="text" id="side_nationality" value="ኢትዮጵያዊ" class="small">
-          አድራሻ: <input type="text" id="side_addr" class="wide" value="">ክ/ከተማ፡ <input type="text" id="side_addr" class="wide" value="">ወረዳ፡ <input type="text" id="side_addr" class="wide" value="">
-          የቤት ቁጥር፡ <input type="text" id="side_addr" class="wide" value="">
-        </p>
-        
-      </div>
-
-      <div class="section">
-        <h3 class="line"><u>አንቀጽ 10፡ የውሉ ተፈፃሚነት ወሰን</u></h3>
-        <br>
-        <p class="line">10.1&nbsp;&nbsp; ይህ ስምምነት በድርጅቱ እና በንግድ አጋሩ ሙሉ ፍቃደኝነት በምስክሮች ፊት የተደረገ ሲሆን ተፈፃሚነቱም በተዋዋይ ወገኖች መካከል ብቻ የተወሰነ ነው፡፡</p>
-        <p class="line">10.2&nbsp;&nbsp; ይህ ስምምነት በዛሬው ዕለት <input type="text" id="company_sign_date" placeholder="ቀን/ወር/ዓ/ም" class="small"> ዓ/ም በተዋዋይ ወገኖች የተፈረመ ሲሆን ከተፈረመበት ዕለት ጀምሮ እስከ <input type="text" id="company_sign_date" placeholder="ቀን/ወር/ዓ/ም" class="small"> ዓ/ም በሕግ ፊት የፀና ይሆናል፡፡</p>
-        <p class="line">በዚሁ መሰረት ተገቢው ስልጣን ያላቸው የተዋዋይ ወገኖች ተወካዮች እንደሚከተለው ተፈራርመዋል፡፡</p> 
-      </div>
-    
-
-      <div class="section">
-        <table class="doc-table" role="table" aria-label="company partner table">
-          <tr>
-            <td style="width:50%;">
-              <div style="font-weight:700; margin-bottom:6px;">ድርጅቱ:- ረቂቅ ትሬዲንግ ኃ/የተ/የግ/ማህበር</div>
-              <div>አድራሻ፡ <input type="text" id="company_addr_short" value="አ/አ ን/ስ/ላ/ክ/ከ፤ 02" class="wide"></div>
-              <div>የቤት ቁጥር: <input type="text" id="company_house_no_2" class="small" value="አዲስ"></div>
-              <div class="row" style="margin-top:10px;">
-                <div class="sig-area">
-                  <label class="field-label">ቀን:</label>
-                  <input type="text" id="company_sign_date" placeholder="ቀን/ወር/ዓ/ም" class="small">
-                </div>
-                <div class="sig-area" style="flex:1;">
-                  <label class="field-label">ፊርማ:</label>
-                  <canvas class="sig-canvas" data-field="company" id="company_canvas"></canvas>
-                  <div class="sig-controls no-print">
-                    <button type="button" data-clear="company_canvas" class="btn-ghost">ሰርዝ</button>
-                    <button type="button" data-undo="company_canvas" class="btn-ghost" disabled>መልስ</button>
-                  </div>
-                </div>
-              </div>
-            </td>
-
-            <td style="width:50%;">
-              <div style="font-weight:700; margin-bottom:6px;">አጋሩ:</div>
-              <div>
-                <select id="side_title" aria-label="side title">
-                  <option value="አቶ">አቶ</option>
-                  <option value="ወ/ሮ">ወ/ሮ</option>
-                </select>
-                <input type="text" id="side_name" placeholder="ሙሉ ስም" class="wide" value="">
-              </div>
-
-              <div>ዜግነት: <input type="text" id="side_nationality" value="ኢትዮጵያዊ" class="small"></div>
-              <div>አድራሻ: <input type="text" id="side_addr" class="wide" value=""></div>
-              <div>ስ.ቁጥር: <input type="text" id="side_phone" class="small" value=""></div>
-
-              <div class="row" style="margin-top:12px;">
-                <div class="sig-area">
-                  <label class="field-label">ቀን:</label>
-                  <input type="text" id="side_sign_date" placeholder="ቀን/ወር/ዓ/ም" class="small">
-                </div>
-
-                <div class="sig-area" style="flex:1;">
-                  <label class="field-label">ፊርማ:</label>
-                  <canvas class="sig-canvas" data-field="partner" id="partner_canvas"></canvas>
-                  <div class="sig-controls no-print">
-                    <button type="button" data-clear="partner_canvas" class="btn-ghost">ሰርዝ</button>
-                    <button type="button" data-undo="partner_canvas" class="btn-ghost" disabled>መልስ</button>
-                  </div>
-                </div>
-              </div>
-
-            </td>
-          </tr>
-        </table>
-      </div>
-      <br>
-
-
-
-      <div class="section">
-        <h3 class="line"><u>አንቀጽ 12፡ ስምምነቱ ሲደረግ የነበሩ ምስክሮች</u></h3>
-        <br>
-        <p class="line">እኛ ከታች ስማችን እና አድራሻችን የተዘረዘረው ምስክሮች ድርጅቱ እና የንግድ አጋሩ ይህንን የንግድ ስራ በብር <input type="number" id="contrib_amount" value="" placeholder="ብር በፊደል" min="0" step="1" class="small">ብር ( <input type="number" id="contrib_amount" value="" placeholder="ብር በቁጥር" min="0" step="1" class="small"> ) ብር አብሮ በጋራ የመስራት ስምምነት በፍቃዳቸው ሲፈራረሙ አይተን በምስክርነት ፈርመናል፡፡</p>
-        <br>
-        <h3 class="line"><u>የምስክሮች ስም</u></h3>
-        <div class="row">
-          <div class="col">
-            <div class="line">1. <input type="text" id="w1_name" placeholder="ሙሉ ስም">  ዜግነት፡- <input type="text" id="w1_nat" class="small" value="ኢትዮጵያዊ">  አድራሻ፡ <input type="text" id="w1_addr" class="wide" placeholder="">  ክ/ከተማ፡ <input type="text" id="w1_city" class="small">  ወረዳ፡ <input type="text" id="w1_woreda" class="small">  የቤት ቁጥር፡ <input type="text" id="w1_house" class="small"></div>
-            <div class="row" style="margin-top:6px; align-items:flex-start;">
-              <div>
-                <label class="field-label">ቀን፡</label>
-                <input type="text" id="w1_date" class="small" placeholder=" ቀን/ወር/ዓ/ም">
-              </div>
-              <div>
-                <label class="field-label">ፊርማ፡</label>
-                <canvas class="sig-canvas" id="w1_canvas" data-field="w1"></canvas>
-                <div class="sig-controls no-print">
-                  <button type="button" data-clear="w1_canvas" class="btn-ghost">ሰርዝ</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="line">2. <input type="text" id="w2_name" placeholder="ሙሉ ስም">  ዜግነት፡- <input type="text" id="w2_nat" class="small" value="ኢትዮጵያዊ">  አድራሻ፡ <input type="text" id="w2_addr" class="wide" placeholder="">  ክ/ከተማ፡ <input type="text" id="w2_city" class="small">  ወረዳ፡ <input type="text" id="w2_woreda" class="small">  የቤት ቁጥር፡ <input type="text" id="w2_house" class="small"></div>
-            <div class="row" style="margin-top:6px; align-items:flex-start;">
-              <div>
-                <label class="field-label">ቀን፡</label>
-                <input type="text" id="w2_date" class="small" placeholder="ቀን/ወር/ዓ/ም">
-              </div>
-              <div>
-                <label class="field-label">ፊርማ፡</label>
-                <canvas class="sig-canvas" id="w2_canvas" data-field="w2"></canvas>
-                <div class="sig-controls no-print">
-                  <button type="button" data-clear="w2_canvas" class="btn-ghost">ሰርዝ</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section center">
-        <div class="muted"></div>
-        <div style="margin-top:12px;">
-          <div class="no-print" role="toolbar" aria-label="actions">
-            <button id="btnPreview" class="btn-primary">ፕሪንት</button>
-            <button id="btnDownloadDoc" class="btn-ghost">ዶክመንት አውርድ(doc)</button>
-            <button id="btnReset" class="btn-ghost">ወደቀድሞ መልስ</button>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 
-  <script src="js/script.js"></script>
-</body>
+  <!-- Stamp Section -->
+  <div class="stamp-section no-print">
+    <h3>ማህተም ማስቀመጫ</h3>
+    <div class="stamp-controls">
+      <label for="stamp_upload">የማህተም ፎቶ ይጫኑ:</label>
+      <input type="file" id="stamp_upload" accept="image/*">
+      <button id="add_stamp" class="btn-primary">ማህተም ጨምር</button>
+      <button id="clear_stamp" class="btn-ghost">ማህተም ሰርዝ</button>
+    </div>
+    <p class="muted">ማስታወቂያ: ማህተሙን በሰነድ ላይ ለማስቀመጥ የሚፈልጉት ቦታ ጠቅ እድርገው ማስቀመጥ ይችላሉ።</p>
+  </div>
+  
+  <div class="paper" id="formPaper" role="document" aria-label="Contract form">
+    <!-- Stamp Container (for placing stamp on paper) -->
+    <div class="stamp-container" id="stamp_container"></div>
+    <!-- ID Images Container -->
+    <div class="id-images-container" id="id_images_container">
+      <div class="id-image-wrapper" id="front_id_wrapper" style="display:none;">
+        <img id="front_id_image" src="" alt="Front ID">
+        <div class="resize-handle" data-resize="front"></div>
+        <button class="remove-id-image no-print" data-id="front">×</button>
+      </div>
+      <div class="id-image-wrapper" id="back_id_wrapper" style="display:none;">
+        <img id="back_id_image" src="" alt="Back ID">
+        <div class="resize-handle" data-resize="back"></div>
+        <button class="remove-id-image no-print" data-id="back">×</button>
+      </div>
+    </div>
+      <br>
+        <p class="line date-line">
+         ቀን:- <input type="text" id="contract_date" placeholder="ቀን/ወር/አ/ም" >
+        </p>
+        <br>
+        <h1>የንግድ ስራ በጋራ አብሮ የመስራት ስምምነት</h1>
+        <br>
+        
+
+        <div class="center small-note"></div>
+
+        <div class="section">
+          
+
+          <h3 class="line"><u>አንቀጽ 1፡ መግቢያ</u></h3>
+          <br>
+
+          <p class="line">ይህ የንግድ ስራ በጋራ አብሮ የመስራት ስምምነት (ከዚህ በኋላ "ስምምነት") በ ረቂቅ ትሬዲንግ ኃ/የተ/የግል ማህበር /Rekik Trading PLC/ (ከዚህ በኋላ "ድርጅቱ")፤ አድራሻ፡- አ/አ፤ ን/ስ/ላ/ክ/ከ፤ ወ፡ 02: የቤ/ቁ. <input type="text" id="company_house_no" class="small" placeholder="የቤት ቁጥር"> የግብር ከፋይ መለያ ቁጥር፡ <input type="text" id="company_tax_id" class="small" value="0087084805">: ስ.ቁ.<input type="text" id="company_phone" class="small" value=""> እና
+
+       
+            <span style="white-space:nowrap;"></span>
+            <select id="partner_title" aria-label="partner title">
+              <option value="አቶ">አቶ</option>
+              <option value="ወ/ሮ">ወ/ሮ</option>
+            </select>
+            :
+            <input type="text" id="partner_name" placeholder="ሙሉ ስም" class="wide" />
+            <span style="margin-left:6px;">ዜግነት:</span>
+            <input type="text" id="partner_nationality" value="ኢትዮጵያዊ" class="small" />
+       
+
+       
+            አድራሻ፡
+            <input type="text" id="partner_address_region" placeholder=" ክልል / ዞን / ወረዳ" class="wide" />
+     
+
+         
+            ስ.ቁጥር፡ <input type="text" id="partner_phone" placeholder="ስልክ ቁጥር" class="small" value="">
+       
+
+         
+            መካከል ከዚህ በታች በተመለከተው አግባብ ድርጅቱ እና የንግድ አጋሩ (ከዚህ በኋላ "የንግድ አጋሮች") በጋራ አብረን የንግድ ስራ ለመስራት በ ቀን: <input type="text" id="party_activity_date" class="small" placeholder="ቀን"> ዓ/ም:<input type="text" id="party_activity_year" class="small" placeholder="ዓ/ም"> በ:<input type="text" id="party_activity_place" class="small" placeholder="ቦታ"> ያደረግነው የንግድ ስራ ስምምነት ሲሆን በስምምነቱ በወንድ ጾታ የተገለጸው ለሴት ጾታም ተፈጻሚነት ይኖረዋል።
+          </p>
+
+        </div>
+        <br>
+
+        <div class="section">
+          <h3 class="line"><u>አንቀጽ 2: የስምምነቱ ዓላማ</u></h3>
+          <br>
+          <p class="line">የዚህ ስምምነት ዓላማ ድርጅቱ እያከናውናቸው ለሚገኙት የንግድ ስራዎች የገንዘብ (የፋይናንስ) አቅርቦት በማስፈለጉ እና የንግድ ስራ አጋሩም ይህንን ገንዘብ/ፋይናንስ በማቅረብ ገንዘቡ በድርጅቱ አማካኝነት ለንግድ ስራው ዓላማ ውሎ ከሚገኘው ትርፍ ላይ ተካፋይ ለመሆን በመፈለጉ በዚህ አግባብ ድርጅቱ እና የንግድ ስራ አጋሩ በጋራ አብረው እንዲሰሩ ለማስቻል ነው።</p>
+        </div>
+        <br>
+        <div class="section">
+          <h3 class="line"><u>አንቀጽ 3፡ የንግድ ስራ አጋሩ መብት እና ግደታ</u></h3>
+          <br>
+
+          <p class="line">3.1&nbsp;&nbsp; የንግድ ስራ አጋሩ ድርጅቱ ለሚያከናውነው የንግድ ስራ ማስኬጃነት የሚውል ብር  ሃምሳ ሺህ ብር ( <input type="number" id="contrib_amount" value="" min="0" step="1" class="small"> ) ብር  ይህ ስምምነት በተፈረመበት ዕለት ለድርጅቱ የመስጠት ግደታ አለበት።</p>
+
+          <p class="line">3.2&nbsp;&nbsp; የንግድ ስራ አጋሩ ለድርጅቱ ለሰጠው ገንዘብ ዋስትና የሚሆን በድርጅቱ ስም የተሰጠ የባንክ ቼክ የመቀበል መብት አለው።</p>
+
+          <p class="line">3.3&nbsp;&nbsp; ድርጅቱ በንግድ አጋሩ የተሰጠውን ገንዘብ በወቅቱ ለመክፈል ካልቻለ የንግድ አጋሩ ለድርጅቱ የአንድ ወር የማስጠንቀቂያ ጊዜ ከሰጠ በኋላ በዋስትና የተቀበለውን ከታች በአንቀጽ 6 የተመለከተውን ቼክ በመመንዘር ገንዘቡን የመውሰድ መብት አለው።</p>
+        </div>
+        <br>
+
+        <div class="section">
+          <h3 class="line"><u>አንቀጽ 4፡ የድርጅቱ መብት እና ግደታ</u></h3>
+          <br>
+          <p class="line">4.1&nbsp;&nbsp; ድርጅቱ ከላይ በአንቀጽ 3/3.1 የተመለከተውን ገንዘብ ለንግድ ስራው ማስኬጃነት ከንግድ አጋሩ የመቀበል መብት አለው።</p>
+
+          <p class="line">4.2&nbsp;&nbsp; ድርጅቱ የንግድ አጋሩ በሰጠው ገንዘብ የሚከናወነውን የንግድ ስራ በፈለገው መንገድ የመምራት ሙሉ ነጻነት አለው።</p>
+
+          <p class="line">4.3&nbsp;&nbsp; ድርጅቱ ከንግድ አጋሩ የተቀበለውን የንግድ ስራ ማስኬጃ ገንዘብ ትርፋማ ነው ለሚለው የትኛውም ሕጋዊ የንግድ ስራ ዓላማ የማዋል እና የማስተዳደር መብት አለው።</p>
+
+          <p class="line">4.4&nbsp;&nbsp; ድርጅቱ ከንግድ አጋሩ ለተቀበለው ገንዘብ መመለስ ዋስትና ይሆን ዘንድ ከታች በአንቀጽ 6 በተመለከተው አግባብ በድርጅቱ ስም የወጣ ቼክ በማስያዣነት የመስጠት ግደታ አለበት።</p>
+        </div>
+
+        <br>
+          <div class="section">
+          <h3 class="line"><u>አንቀጽ 5፡ ክልከላ</u></h3>
+          <br>
+          <p class="line">5.1&nbsp;&nbsp; የንግድ ስራ አጋሩ ለድርጅቱ የንግድ ስራ ማስኬጃ የሰጠውን ከላይ በንዑስ አንቀጽ 3.1 የተመለከተው ገንዘብ ይህ ውል ጸንቶ የሚቆይበት ጊዜ እስካላበቃ ድረስ እንዲመለስለት ሊጠይቅ አይችልም።</p>
+
+          <p class="line">5.2&nbsp;&nbsp; የንግድ አጋሩ በድርጅቱ ለዋስትና የተሰጠውን ከታች በአንቀጽ 6 የተመለከተውን ቼክ ለእዳ መክፈያነትም ሆነ ማስያዣነት ወይም ለሌላ ማናቸውም ዓላማ ለሶስተኛ ወገን አሳልፎ መስጠት አይችልም።</p>
+
+        </div>
+        <br>
+
+        <div class="section">
+          <h3 class="line"><u>አንቀጽ 6፡ ስለዋስትና</u></h3>
+          <br>
+          <p class="line">ድርጅቱ ይህ ስምምነት ጸንቶ የሚቆይበት ጊዜ ሲያበቃ በንግድ አጋሩ የተሰጠውን ከላይ በአንቀጽ 3/3.1 ስር የተመለከተውን ዋና ገንዘብ ለመመለሱ ዋስትና ይሆን ዘንድ በድርጅቱ ስም የወጣ ቁጥሩ <input type="text" id="cheque_no" class="small" value="D7868116">  የሆነ በቀን <input type="text" id="cheque_date" class="small" placeholder="ቀን/ወር/ዓ/ም">  ኢትዮጵያ ንግድ ባንክ ለ <input type="text" id="bank_branch" class="small" value="" placeholder="ቅርጫፍ">  የሚመነዘር ብር: <input type="number" id="cheque_amount" value="" class="small" min="0"> ቼክ ለንግድ አጋሩ ለመስጠት ተስማምቷል።</p>
+        </div>
+        <br>
+
+        <div class="section">
+          <h3 class="line"><u>አንቀጽ 7፡ የማስታወቂያ እና የማስጠንቀቂያ አሰጣጥ</u></h3>
+          <br>
+          <p class="line">7.1&nbsp;&nbsp;በዚህ ስምምነት መሰረት በተዋዋዮች የሚሰጥ ማስታወቂያ እና ማስጠንቀቂያ በፅሑፍ መደረግ ያለበት ሲሆን በአማርኛ ቋንቋ ወይም በሌላ ቋንቋ የተዘጋጀ ሊሆን ይችላል፡፡ ነገር ግን እንደአስፈላጊነቱ በአማርኛ ቋንቋ ወይም በሌላ ቋንቋ የተዘጋጀው ማስታወቂያ ወይም ማስጠንቀቂያ ተዋዋዮች ሊያነቡት እና ለረዱት በሚችሉት ሌላ ቋንቋ ወይም በአማርኛ ቋንቋ ተተርጉሞ መቅረብ ይኖርበታል፡፡</p>
+          <p class="line">7.2&nbsp;&nbsp;አንደኛው ተዋዋይ ለሌላኛው ተዋዋይ የሚሰጠው ማስታወቂያ ወይም ማስጠንቀቂያ በአግባቡ እንደደርሰ የሚቆጠረው ማስታወቂያው ወይም ማስጠንቀቂያው ከዚህ ቀጥሎ በተመለከተው የተዋዋዮች አድራሻ በእጅ ወይም በኢ-ሜይል ወይም ተዋዋዮች አንደኛው ለሌላኛው በፅሑፍ በሚገልፀው የማስታወቂያ ወይም የማስጠንቀቂያ መስጫ አድራሻ የደረሰ ከሆነ ነው፡፡</p>
+
+          <p class="line">ማስታወቂያ/ማስጠንቀቂያ ለንግድ አጋሩ የሚላክበት   አድራሻ፡ <input type="text" id="partner_notice_addr" class="wide" placeholder="የአጋር ማስታወቂያ አድራሻ">  ስ.ቁጥር፡ <input type="text" id="partner_notice_phone" class="small" placeholder="ስልክ"></p>
+        </div>
+        <br>
+
+        <div class="section">
+          <h3 class="line"><u>አንቀጽ 8፡ ስምምነቱ ጸንቶ የሚቆይበት ጊዜ</u></h3>
+          <br>
+          <p class="line">8.1&nbsp;&nbsp; ይህ ስምምነት ከተፈረመበት ጊዜ ጀምሮ ለ <input type="number" id="contract_months" min="0" value="6" class="small"> ወር ጊዜ ማለትም እስከ: <input type="text" id="contract_end_date" class="small" placeholder="ቀን/ወር/ዓ/ም"> ይቆያል፡፡</p>
+          <p class="line">8.2&nbsp;&nbsp;ከላይ በንዑስ አንቀጽ 8.1 የተመለከተው ቢኖርም ከታች በአንቀጽ 10/10.1 በተመለከተው አግባብ በሁለቱ ወገኖች ስምምነት ውሉ ጸንቶ ከሚቆይበት ጊዜ አስቀድሞ ሊቋረጥ ይችላል፡፡</p>
+        </div>
+        <br>
+
+        <div class="section">
+          <h3 class="line"><u>አንቀጽ 9፡ ስምምነቱን ስለማቋረጥ</u></h3>
+          <br>
+          <p class="line">ይህ ስምምነት በሚከተሉት ሁኔታዎች ሊቋረጥ ይችላል፡፡</p>
+          <p class="line">9.1&nbsp;&nbsp; ድርጅቱ እና የንግድ አጋሩ ስምምነቱን ለማቋረጥ በሚያደርጉት የሁለትዮሽ ስምምነት መሰረትᤤ</p>
+          <p class="line">9.2&nbsp;&nbsp; ውሉን የተዋዋሉበት የጊዜ ገደብ ሲያበቃᤤማለትም  <input type="text" id="contract_end_date" class="small" placeholder="ቀን/ወር/ዓ/ም"> ዓ/ም በሓላ፤</p>
+          <p class="line">9.3&nbsp;&nbsp;ይህንን የገንዘብ ብድር ስምምነት ውል ለማፍረስ የሞከረ ወገን በፍ/ብ/ሕ/ቁ.1889/1890 መሰረት ውሉ ለፈረሰበት ወገን 100000(አንድ መቶ ሺህ ብር) ገደብ ከፍሎ ውሉ በህግ ፊት የፀና ይሆናል፡፡ ውሉም አይፈርስም፡፡</p>
+        </div>
+        <br>
+
+        <div class="section">
+          <h3 class="line"><u>እማኞች</u></h3>
+          <br>
+          <p class="line">
+            1. 
+            <select id="side_title" aria-label="side title">
+              <option value="አቶ">አቶ</option>
+              <option value="ወ/ሮ">ወ/ሮ</option>
+            </select>
+            <input type="text" id="side_name" class="wide" placeholder="ሙሉ ስም" value="">ዜግነት: <input type="text" id="side_nationality" value="ኢትዮጵያዊ" class="small">
+            አድራሻ: <input type="text" id="side_addr" class="wide" value="">ክ/ከተማ፡ <input type="text" id="side_addr" class="wide" value="">ወረዳ፡ <input type="text" id="side_addr" class="wide" value="">
+            የቤት ቁጥር፡ <input type="text" id="side_addr" class="wide" value="">
+          </p>
+
+          <p class="line">
+            2. 
+            <select id="side_title" aria-label="side title">
+              <option value="አቶ">አቶ</option>
+              <option value="ወ/ሮ">ወ/ሮ</option>
+            </select>
+            <input type="text" id="side_name" class="wide" placeholder="ሙሉ ስም" value="">ዜግነት: <input type="text" id="side_nationality" value="ኢትዮጵያዊ" class="small">
+            አድራሻ: <input type="text" id="side_addr" class="wide" value="">ክ/ከተማ፡ <input type="text" id="side_addr" class="wide" value="">ወረዳ፡ <input type="text" id="side_addr" class="wide" value="">
+            የቤት ቁጥር፡ <input type="text" id="side_addr" class="wide" value="">
+          </p>
+          
+        </div>
+
+        <div class="section">
+          <h3 class="line"><u>አንቀጽ 10፡ የውሉ ተፈፃሚነት ወሰን</u></h3>
+          <br>
+          <p class="line">10.1&nbsp;&nbsp; ይህ ስምምነት በድርጅቱ እና በንግድ አጋሩ ሙሉ ፍቃደኝነት በምስክሮች ፊት የተደረገ ሲሆን ተፈፃሚነቱም በተዋዋይ ወገኖች መካከል ብቻ የተወሰነ ነው፡፡</p>
+          <p class="line">10.2&nbsp;&nbsp; ይህ ስምምነት በዛሬው ዕለት <input type="text" id="company_sign_date" placeholder="ቀን/ወር/ዓ/ም" class="small"> ዓ/ም በተዋዋይ ወገኖች የተፈረመ ሲሆን ከተፈረመበት ዕለት ጀምሮ እስከ <input type="text" id="company_sign_date" placeholder="ቀን/ወር/ዓ/ም" class="small"> ዓ/ም በሕግ ፊት የፀና ይሆናል፡፡</p>
+          <p class="line">በዚሁ መሰረት ተገቢው ስልጣን ያላቸው የተዋዋይ ወገኖች ተወካዮች እንደሚከተለው ተፈራርመዋል፡፡</p> 
+        </div>
+      
+
+        <div class="section">
+          <table class="doc-table" role="table" aria-label="company partner table">
+            <tr>
+              <td style="width:50%;">
+                <div style="font-weight:700; margin-bottom:6px;">ድርጅቱ:- ረቂቅ ትሬዲንግ ኃ/የተ/የግ/ማህበር</div>
+                <div>አድራሻ፡ <input type="text" id="company_addr_short" value="አ/አ ን/ስ/ላ/ክ/ከ፤ 02" class="wide"></div>
+                <div>የቤት ቁጥር: <input type="text" id="company_house_no_2" class="small" value="አዲስ"></div>
+                <div class="row" style="margin-top:10px;">
+                  <div class="sig-area">
+                    <label class="field-label">ቀን:</label>
+                    <input type="text" id="company_sign_date" placeholder="ቀን/ወር/ዓ/ም" class="small">
+                  </div>
+                  <div class="sig-area" style="flex:1;">
+                    <label class="field-label">ፊርማ:</label>
+                    <canvas class="sig-canvas" data-field="company" id="company_canvas"></canvas>
+                    <div class="sig-controls no-print">
+                      <button type="button" data-clear="company_canvas" class="btn-ghost">ሰርዝ</button>
+                      <button type="button" data-undo="company_canvas" class="btn-ghost" disabled>መልስ</button>
+                    </div>
+                  </div>
+                </div>
+              </td>
+
+              <td style="width:50%;">
+                <div style="font-weight:700; margin-bottom:6px;">አጋሩ:</div>
+                <div>
+                  <select id="side_title" aria-label="side title">
+                    <option value="አቶ">አቶ</option>
+                    <option value="ወ/ሮ">ወ/ሮ</option>
+                  </select>
+                  <input type="text" id="side_name" placeholder="ሙሉ ስም" class="wide" value="">
+                </div>
+
+                <div>ዜግነት: <input type="text" id="side_nationality" value="ኢትዮጵያዊ" class="small"></div>
+                <div>አድራሻ: <input type="text" id="side_addr" class="wide" value=""></div>
+                <div>ስ.ቁጥር: <input type="text" id="side_phone" class="small" value=""></div>
+
+                <div class="row" style="margin-top:12px;">
+                  <div class="sig-area">
+                    <label class="field-label">ቀን:</label>
+                    <input type="text" id="side_sign_date" placeholder="ቀን/ወር/ዓ/ም" class="small">
+                  </div>
+
+                  <div class="sig-area" style="flex:1;">
+                    <label class="field-label">ፊርማ:</label>
+                    <canvas class="sig-canvas" data-field="partner" id="partner_canvas"></canvas>
+                    <div class="sig-controls no-print">
+                      <button type="button" data-clear="partner_canvas" class="btn-ghost">ሰርዝ</button>
+                      <button type="button" data-undo="partner_canvas" class="btn-ghost" disabled>መልስ</button>
+                    </div>
+                  </div>
+                </div>
+
+              </td>
+            </tr>
+          </table>
+        </div>
+        <br>
+
+        <div class="section">
+          <h3 class="line"><u>አንቀጽ 12፡ ስምምነቱ ሲደረግ የነበሩ ምስክሮች</u></h3>
+          <br>
+          <p class="line">እኛ ከታች ስማችን እና አድራሻችን የተዘረዘረው ምስክሮች ድርጅቱ እና የንግድ አጋሩ ይህንን የንግድ ስራ በብር <input type="number" id="contrib_amount" value="" placeholder="ብር በፊደል" min="0" step="1" class="small">ብር ( <input type="number" id="contrib_amount" value="" placeholder="ብር በቁጥር" min="0" step="1" class="small"> ) ብር አብሮ በጋራ የመስራት ስምምነት በፍቃዳቸው ሲፈራረሙ አይተን በምስክርነት ፈርመናል፡፡</p>
+          <br>
+          <h3 class="line"><u>የምስክሮች ስም</u></h3>
+          <div class="row">
+            <div class="col">
+              <div class="line">1. <input type="text" id="w1_name" placeholder="ሙሉ ስም">  ዜግነት፡- <input type="text" id="w1_nat" class="small" value="ኢትዮጵያዊ">  አድራሻ፡ <input type="text" id="w1_addr" class="wide" placeholder="">  ክ/ከተማ፡ <input type="text" id="w1_city" class="small">  ወረዳ፡ <input type="text" id="w1_woreda" class="small">  የቤት ቁጥር፡ <input type="text" id="w1_house" class="small"></div>
+              <div class="row" style="margin-top:6px; align-items:flex-start;">
+                <div>
+                  <label class="field-label">ቀን፡</label>
+                  <input type="text" id="w1_date" class="small" placeholder=" ቀን/ወር/ዓ/ም">
+                </div>
+                <div>
+                  <label class="field-label">ፊርማ፡</label>
+                  <canvas class="sig-canvas" id="w1_canvas" data-field="w1"></canvas>
+                  <div class="sig-controls no-print">
+                    <button type="button" data-clear="w1_canvas" class="btn-ghost">ሰርዝ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="line">2. <input type="text" id="w2_name" placeholder="ሙሉ ስም">  ዜግነት፡- <input type="text" id="w2_nat" class="small" value="ኢትዮጵያዊ">  አድራሻ፡ <input type="text" id="w2_addr" class="wide" placeholder="">  ክ/ከተማ፡ <input type="text" id="w2_city" class="small">  ወረዳ፡ <input type="text" id="w2_woreda" class="small">  የቤት ቁጥር፡ <input type="text" id="w2_house" class="small"></div>
+              <div class="row" style="margin-top:6px; align-items:flex-start;">
+                <div>
+                  <label class="field-label">ቀን፡</label>
+                  <input type="text" id="w2_date" class="small" placeholder="ቀን/ወር/ዓ/ም">
+                </div>
+                <div>
+                  <label class="field-label">ፊርማ፡</label>
+                  <canvas class="sig-canvas" id="w2_canvas" data-field="w2"></canvas>
+                  <div class="sig-controls no-print">
+                    <button type="button" data-clear="w2_canvas" class="btn-ghost">ሰርዝ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section center">
+          <div class="muted"></div>
+          <div style="margin-top:12px;">
+            <div class="no-print" role="toolbar" aria-label="actions">
+              <button id="btnAddPage" class="btn-ghost">ገጽ ጨምር</button>
+              <button id="btnPreview" class="btn-primary">ፕሪንት</button>
+              <button id="btnDownloadDoc" class="btn-ghost">ዶክመንት አውርድ(doc)</button>
+              <button id="btnReset" class="btn-ghost">ወደቀድሞ መልስ</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Additional Pages Container -->
+    <div id="additional_pages"></div>
+
+    <!-- Page Template (hidden) -->
+    <template id="page_template">
+      <div class="paper additional-page" role="document" aria-label="Additional page">
+        <div class="page-stamp-container"></div>
+        <div class="page-id-images-container"></div>
+        <div class="page-content" style="min-height:100%; min-width: 100%;">
+          <!-- Empty page for additional notes/signatures -->
+        </div>
+      </div>
+    </template>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
